@@ -88,9 +88,6 @@ jobs:
         PROXY_REQUIRED: false
       run: bash scripts/setup_mihomo_proxy.sh
     
-    - name: Reveal Secret
-      run: echo "${{ secrets.ANYROUTER_ACCOUNTS }}" | base64
-    
     - name: 执行签到
       env:
         DEBUG_MODE: ${{ env.DEBUG_MODE }}
